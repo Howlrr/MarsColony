@@ -4,6 +4,10 @@ import java.util.HashMap;
 public class MarsStorage implements Storage {
     private Map<String, Integer> inventory = new HashMap<>();
 
+    public Map<String, Integer> getInventory() {
+        return inventory;
+    }
+
     @Override
     public void addResource(String name, int amount){
         if (amount <= 0){
@@ -38,5 +42,4 @@ public class MarsStorage implements Storage {
         }
         System.out.println("--------------\n");
     }
-
 }
